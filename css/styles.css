@@ -151,7 +151,7 @@ img {
   fill: currentColor;
   width: 16px;
   height: 12px;
-  transition-property: color;
+  transition-property: fill;
   transition-duration: 250ms;
   transition-timing-function: var(--transition-time);
 }
@@ -163,9 +163,9 @@ img {
   vertical-align: middle;
   margin-right: 10px;
   fill: currentColor;
+  transition-property: fill;
   transition-duration: 250ms;
   transition-timing-function: var(--transition-time);
-  transition-delay: 0;
 }
 .phone-icon:hover,
 .phone-icon:focus {
@@ -588,7 +588,6 @@ img {
   color: var(--hero-color);
   letter-spacing: 0.03em;
   height: 100%;
-  transition-property: color;
   transform: translateY(100%);
   transition: transform 250ms var(--transition-time);
 }
