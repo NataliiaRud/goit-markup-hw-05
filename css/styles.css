@@ -108,9 +108,9 @@ img {
   color: var(--main-color-text);
   padding-top: 32px;
   padding-bottom: 32px;
+  transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: var(--transition-time);
-  transition-delay: 0;
 }
 .nav-link:hover,
 .nav-link:focus {
@@ -137,9 +137,9 @@ img {
   color: var(--second-color-text);
   padding-top: 32px;
   padding-bottom: 32px;
+  transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: var(--transition-time);
-  transition-delay: 0;
 }
 .contacts-link:hover,
 .contacts-link:focus {
@@ -151,9 +151,9 @@ img {
   fill: currentColor;
   width: 16px;
   height: 12px;
+  transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: var(--transition-time);
-  transition-delay: 0;
 }
 .mail-icon:hover,
 .mail-icon:focus {
@@ -221,9 +221,9 @@ img {
   min-width: 216px;
   padding: 10px 32px;
   border: none;
+  transition-property: background-color;
   transition-duration: 250ms;
   transition-timing-function: var(--transition-time);
-  transition-delay: 0;
 }
 .hero-button:hover,
 .hero-button:focus {
@@ -289,23 +289,21 @@ img {
 .projects-item {
   position: relative;
 }
-.projects-overlay {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 70px;
-  /*padding: 27px 107px;*/
-  background-color: rgba(47, 48, 58, 0.8);
-}
 .projects-overlay-title {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
-  text-align: center;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--hero-color);
-  padding: 27px 107px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+  background-color: rgba(47, 48, 58, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 /*----------------TEAM---------------*/
 .team {
@@ -360,9 +358,9 @@ img {
   justify-content: center;
   align-items: center;
   border-radius: 50%;
+  transition-property: fill, background-color;
   transition-duration: 250ms;
   transition-timing-function: var(--transition-time);
-  transition-delay: 0;
 }
 .social-internet-link:hover,
 .social-internet-link:focus {
@@ -402,9 +400,9 @@ img {
   align-items: center;
   box-sizing: border-box;
   color: var(--social-network-color);
+  transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: var(--transition-time);
-  transition-delay: 0;
 }
 .brands-icon {
   fill: currentColor;
@@ -443,9 +441,9 @@ img {
   font-style: normal;
   line-height: 1.71;
   color: var(--hero-color);
+  transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: var(--transition-time);
-  transition-delay: 0;
 }
 .adress-link:hover,
 .adress-link:focus {
@@ -456,9 +454,9 @@ img {
   font-weight: 400;
   line-height: 1.71;
   color: var(--adress-color);
+  transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: var(--transition-time);
-  transition-delay: 0;
 }
 .adress-adress:hover,
 .adress-adress:focus {
@@ -493,9 +491,9 @@ img {
   background: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
   fill: var(--hero-color);
+  transition-property: background-color;
   transition-duration: 250ms;
   transition-timing-function: var(--transition-time);
-  transition-delay: 0;
 }
 .join-internet-link:hover,
 .join-internet-link:focus {
@@ -541,9 +539,9 @@ img {
   padding: 6px 22px;
   border-color: transparent;
   border: none;
+  transition-property: color, background-color, box-shadow;
   transition-duration: 250ms;
   transition-timing-function: var(--transition-time);
-  transition-delay: 0;
 }
 .galery-btn:hover,
 .galery-btn:focus {
@@ -561,14 +559,15 @@ img {
 .galery-card {
   flex-basis: calc((100% - 60px) / 3);
 }
-.galery-card:hover .galery-top-text {
+.galery-card-link:hover .galery-top-text,
+.galery-card-link:focus .galery-top-text {
   transform: translateY(0);
 }
 .galery-card-link {
   display: block;
+  transition-property: box-shadow;
   transition-duration: 250ms;
   transition-timing-function: var(--transition-time);
-  transition-delay: 0;
 }
 .galery-card-link:hover,
 .galery-card-link:focus {
@@ -589,6 +588,7 @@ img {
   color: var(--hero-color);
   letter-spacing: 0.03em;
   height: 100%;
+  transition-property: color;
   transform: translateY(100%);
   transition: transform 250ms var(--transition-time);
 }
